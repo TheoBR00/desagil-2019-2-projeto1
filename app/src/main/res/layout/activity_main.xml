@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
 
     <TextView
@@ -23,25 +24,17 @@
         android:id="@+id/mensagem_alfa"
         android:layout_width="395dp"
         android:layout_height="40dp"
-        android:layout_marginTop="40dp"
         android:hint="Mensagem"
         android:textColor="@android:color/black"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/alfanumerico" />
+        android:textSize="20sp"/>
 
     <TextView
         android:id="@+id/morse"
         android:layout_width="395dp"
         android:layout_height="40dp"
-        android:layout_marginTop="196dp"
         android:text="Mensagem morse"
         android:textColor="@android:color/black"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="20sp"/>
 
     <TextView
         android:id="@+id/mensagem_morse"
@@ -49,45 +42,38 @@
         android:layout_height="40dp"
         android:hint="Mensagem"
         android:textColor="@android:color/black"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/morse" />
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/sos"
+        android:layout_width="120dp"
+        android:layout_height="124dp"
+        android:layout_marginTop="100sp"
+        android:text="SOS"
+        android:textSize="50dp" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="122dp"
+        android:layout_height="124dp"
+        android:layout_marginTop="-124dp"
+        android:layout_marginLeft="130dp"
+        android:text="⌫"
+        android:textSize="50dp" />
+
+    <Button
+        android:id="@+id/dicionario"
+        android:layout_width="122dp"
+        android:layout_height="124dp"
+        android:layout_marginTop="-124dp"
+        android:layout_marginLeft="260dp"
+        android:text="DIC"
+        android:textSize="50dp" />
 
     <Button
         android:id="@+id/morse_tap"
         android:layout_width="414dp"
         android:layout_height="161dp"
         android:text=".-"
-        android:textSize="70dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/sos"
-        android:layout_width="120dp"
-        android:layout_height="124dp"
-        android:text="SOS"
-        android:textSize="50dp"
-        app:layout_constraintEnd_toStartOf="@+id/delete"
-        app:layout_constraintStart_toEndOf="@+id/dicionario"
-        tools:layout_editor_absoluteY="435dp" />
-
-    <Button
-        android:id="@+id/delete"
-        android:layout_width="122dp"
-        android:layout_height="124dp"
-        android:text="⌫"
-        android:textSize="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="435dp" />
-
-    <Button
-        android:id="@+id/dicionario"
-        android:layout_width="122dp"
-        android:layout_height="124dp"
-        android:text="DIC"
-        android:textSize="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="435dp" />
-</android.support.constraint.ConstraintLayout>
+        android:textSize="70dp" />
+</LinearLayout>
