@@ -3,6 +3,7 @@ package br.pro.hashi.ensino.desagil.projeto1;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.speech.tts.TextToSpeech;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -13,15 +14,29 @@ import android.telephony.SmsManager;
 import android.widget.Button;
 import android.widget.Toast;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
     private static final int REQUEST_SEND_SMS = 1;
+    TextToSpeech tts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button sos_button = findViewById(R.id.sos);
+
+        //FUNÇÃO PRO TTS FUNCIONAR
+        tts = new TextToSpeech(getApplicationContext(), status -> {
+            if(status != TextToSpeech.ERROR) {
+                tts.setLanguage(Locale.US);
+            }
+        });
+
+
+        // VAMOS USAR ESSA FUNÇÃO PARA USAR O TEXT-TO-SPEECH
+        //tts.speak("This is a test", TextToSpeech.QUEUE_FLUSH, null, null);
 
         sos_button.setOnLongClickListener(view -> {
             sosClicked();
