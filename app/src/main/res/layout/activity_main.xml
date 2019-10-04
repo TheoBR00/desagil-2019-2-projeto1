@@ -12,7 +12,7 @@
         android:id="@+id/alfanumerico"
         android:layout_width="395dp"
         android:layout_height="40dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="60dp"
         android:text="Mensagem alfanumérica"
         android:textColor="@android:color/black"
         android:textSize="20sp"
@@ -46,34 +46,44 @@
 
     <Button
         android:id="@+id/sos"
-        android:layout_width="120dp"
+        android:layout_width="110dp"
         android:layout_height="124dp"
-        android:layout_marginTop="100sp"
+        android:layout_marginTop="20sp"
+        android:backgroundTint="#E70505"
+        android:drawableTint="#F44336"
         android:text="SOS"
-        android:textSize="50dp" />
+        android:textColor="#EEEAEA"
+        android:textSize="45dp" />
 
     <Button
         android:id="@+id/delete"
-        android:layout_width="122dp"
+        android:layout_width="110dp"
         android:layout_height="124dp"
+        android:layout_marginLeft="128dp"
         android:layout_marginTop="-124dp"
-        android:layout_marginLeft="130dp"
+        android:backgroundTint="#8CDDF1"
         android:text="⌫"
-        android:textSize="50dp" />
+        android:textColor="#0C0B0B"
+        android:textSize="45dp" />
 
     <Button
         android:id="@+id/dicionario"
-        android:layout_width="122dp"
+        android:layout_width="110dp"
         android:layout_height="124dp"
+        android:layout_marginLeft="268dp"
         android:layout_marginTop="-124dp"
-        android:layout_marginLeft="260dp"
+        android:backgroundTint="#8CDDF1"
         android:text="DIC"
-        android:textSize="50dp" />
+        android:textColor="#4D4949"
+        android:textSize="45dp" />
 
     <Button
         android:id="@+id/morse_tap"
         android:layout_width="414dp"
         android:layout_height="161dp"
+        android:backgroundTint="#3F51B5"
         android:text=".-"
-        android:textSize="70dp" />
+        android:textColor="#FCFAFA"
+        android:textSize="105dp"
+        android:layout_marginTop="30dp" />
 </LinearLayout>
